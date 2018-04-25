@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+ * {
+     font-family: 'Roboto Slab', serif;
+}
+ html, body {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+}
+ body {
+     font-family: "Helvetica Neue",sans-serif;
+     font-weight: lighter;
+}
+ header {
+     width: 100%;
+     height: 100vh;
+     background: url(../images/hero.jpg) no-repeat 50% 50%;
+     background-size: cover;
+     position: relative;
+}
+ .content {
+     width: 94%;
+     margin: 4em auto;
+     font-size: 20px;
+     line-height: 30px;
+     text-align: justify;
+}
+ .logo {
+     line-height: 60px;
+     position: fixed;
+     float: left;
+     margin: 3px 46px;
+     color: #fff;
+     font-weight: bold;
+     font-size: 20px;
+     letter-spacing: 2px;
+}
+ nav {
+     position: fixed;
+     width: 100%;
+     line-height: 60px;
+     z-index: 3;
+}
+ nav ul {
+     line-height: 60px;
+     list-style: none;
+     background: rgba(0, 0, 0, 0);
+     overflow: hidden;
+     color: #fff;
+     padding: 0;
+     text-align: right;
+     margin: 0;
+     padding-right: 40px;
+     transition: 1s;
+}
+ nav.nav_red ul {
+     background: #c0392b;
+}
+ nav ul li {
+     display: inline-block;
+     padding: 16px 40px;
+     ;
+}
+ nav ul li a {
+     text-decoration: none;
+     color: #fff;
+     font-size: 16px;
+}
+ nav ul li a:hover,nav ul li a:focus {
+     text-decoration: none;
+     color: #fff;
+     font-size: 16px;
+     border:0px solid;
+}
+ nav ul li:hover {
+     text-decoration: none;
+     color: #fff;
+     font-size: 16px;
+     border-bottom: 3px solid white;
+     transition: .5s ease;
+     -webkit-backface-visibility: hidden;
+     -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+ .menu-icon {
+     line-height: 60px;
+     width: 100%;
+     background: #c0392b;
+     text-align: right;
+     box-sizing: border-box;
+     padding: 15px 24px;
+     cursor: pointer;
+     color: #fff;
+     display: none;
+}
+ @media(max-width: 786px) {
+     .logo {
+         position: fixed;
+         top: 0;
+         margin-top: 3px;
+    }
+     nav ul {
+         max-height: 0px;
+         background: #c0392b;
+    }
+     nav.nav_red ul {
+         background: #c0392b;
+    }
+     .showing {
+         max-height: 34em;
+    }
+     nav ul li {
+         box-sizing: border-box;
+         width: 100%;
+         padding: 24px;
+         text-align: center;
+    }
+     .menu-icon {
+         display: block;
+    }
+     #search_area {
+         margin-top: 20% !important;
+         left:0!important;
+         padding: 5%;
+         height: auto;
+         width: 100% !important;
+         box-sizing: border-box;
+         opacity: 0.9;
+         
+         z-index: 2;
+    }
+     #list_area{
+         margin-top:33% !important;
+         position: static!important;
+         width:100% !important;
+         z-index: 2;
+    }
+     #details_wrapper{
+         margin-top:20%;
+         z-index: 2;
+         width:100%;
+    }
+    #details_area{
+        margin-top: 40% ! important;
+    }
+     #side_block{
+         display: none;
+    }
+    }
+    #list_thumb{
+        min-width:30%!important;
+        height:auto;
+    }
+}
+ @media(min-width: 786px) {
+     
+    #list_thumb{
+        min-width:30%!important;
+        max-width:35%!important;
+        height:auto;
+    }
+    
+  
+     #side_block{
+         padding: 20px;
+         border:1px solid;
+    }
+}
+ #list_area{
+         top:20%;
+         left: 0;
+         right: 0;
+         margin: 0 auto;
+         position: absolute;
+         width:50%;
+         z-index: 2;
+    }
+#details_area{
+        margin-top: 15%;
+    }
+    #search_area {
+         top: 20%;
+         left: 30%;
+         padding: 3%;
+         height: auto;
+         width: 40%;
+         box-sizing: border-box;
+         opacity: 0.8;
+         position: absolute;
+         z-index: 2;
+    }
+ .nav-tabs {
+     border-bottom: 2px solid #DDD;
+}
+ .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+     border:0px ! important;
+     border-width: 0;
+}
+ .nav-tabs > li > a {
+     height:70px;
+     border: none;
+     color:black;
+     text-align: center;
+}
+ .nav-tabs > li{
+     width: 33%;
+}
+ .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+     border: none;
+     color: black !important;
+     background: transparent;
+}
+ .nav-tabs > li > a::after {
+     content: "";
+     background: #c0392b;
+     height: 2px;
+     position: absolute;
+     width: 100%;
+     left: 0px;
+     bottom: -1px;
+     transition: all 250ms ease 0s;
+     transform: scale(0);
+}
+ .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+     transform: scale(1);
+}
+ .tab-nav > li > a::after {
+     background: #21527d none repeat scroll 0% 0%;
+     color: #fff;
+}
+ .tab-pane {
+     padding: 15px 0;
+}
+ .tab-content {
+     padding: 20px
+}
+ .card {
+     background: #FFF none repeat scroll 0% 0%;
+     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+     margin-bottom: 30px;
+}
+ .unhighlight, .unhighlight:hover{
+     text-decoration: none;
+     color: black;
+     display: block;
+}
+ .btn-black {
+     background-color: #2e2e2e;
+}
+ .review-list {
+     margin-top: 20px;
+     margin-bottom: 10px;
+     padding-top: 10px;
+     padding-bottom: 20px;
+     border-bottom: 2px solid #e4e4e4;
+}
+ .rating-star-list {
+     margin-left: -1px;
+     margin-top: 5px;
+     margin-bottom: 0;
+}
+ .fa-star,.fa-star-half ,.fa-calendar{
+     color: #c0392b;
+}
+ .fa-star-o {
+     color: #909090;
+}
+ #write-review{
+     background-color: #c0392b;
+}
+ footer {
+     color: white;
+     height: 10%;
+     width: 100%;
+     padding-top: 10px;
+     background-color: #181818;
+}
+ .food-menu-grid {
+     margin-top: 60px;
+}
+ .food-menu-grid .hover-content {
+     margin-top: 15px;
+     margin-bottom: 15px;
+     overflow: hidden;
+     position: relative;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+}
+ .food-menu-grid .hover-content .overlay {
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.4);
+     color: #fff;
+     opacity: 1;
+}
+ .welcome-box {
+     padding: 10px 30px 30px;
+     border: 1px solid #e5e5e5;
+}
+ .btn-black{
+     background-color:#000000;
+     color:#ffffff;
+}
+.wrapper{
+    position: relative;
+ }
+ .detail_img{
+    height: 300px !important;
+    width: 100%;
+    object-fit: cover;
+}
+.badge{
+    font-size: 20px !important;
+    background-color: black !important;
+}
