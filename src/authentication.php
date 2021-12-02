@@ -13,7 +13,7 @@ if(isset($_POST['uname'])){
 		echo "Mobile Number Already registered!";
 		exit;
 	}
-	$query1="INSERT INTO users VALUES ('','$mobno','$uname','$pass')";
+	$query1="INSERT INTO users VALUES (DEFAULT,'$mobno','$uname','$pass')";
 	$result1=mysqli_query($con,$query1);
 	if($result1){
 		echo "1";

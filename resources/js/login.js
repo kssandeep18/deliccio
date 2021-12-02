@@ -18,7 +18,7 @@ $("#signup_btn").click(function(e) {
     }
     $.ajax({
         type: 'post',
-        url: 'authentication.php',
+        url: '../../src/authentication.php',
         data: {
             'mobno': mobno,
             'uname': uname,
@@ -55,7 +55,7 @@ $("#login_btn").click(function() {
     }
     $.ajax({
         type: 'get',
-        url: 'authentication.php',
+        url: '../../src/authentication.php',
         data: {
             'mobno': mobno,
             'pass': pass

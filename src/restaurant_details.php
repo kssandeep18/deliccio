@@ -2,7 +2,7 @@
 include "db.php";
 session_start();
 if(!isset($_GET['id'])){
-  header("location:index.php");
+  header("location:../index.php");
   exit;
 }
 $res_id=$_GET['id'];
@@ -14,7 +14,7 @@ $res_id=$_GET['id'];
     <title>Deliccio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/style1.css">
+    <link rel="stylesheet" type="text/css" href="../resources/styles/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,11 +28,11 @@ $res_id=$_GET['id'];
             <i class="fa fa-bars fa-2x"></i>
         </div>
         <div class="logo">
-            <img src="images/logo.png" class="img-responsive">
+            <img src="../resources/images/logo.png" class="img-responsive">
         </div>
         <div class="menu">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <?php 
                         if(!isset($_SESSION['isLogin'])){
                             echo"<li id='nav_signup'><a href='#'' data-toggle='modal' data-target='#signup_modal'>Sign Up</a></li>
@@ -161,35 +161,35 @@ $res_id=$_GET['id'];
                                 <div class="tab-pane" id="gallery">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <img src="images/gallery1.jpg" alt="gallery_image" class="img-thumbnail">
+                                            <img src="../resources/images/gallery1.jpg" alt="gallery_image" class="img-thumbnail">
                                         </div>
                                         <div class="col-sm-4">
-                                            <img src="images/gallery2.jpg" alt="gallery_image" class="img-thumbnail">
+                                            <img src="../resources/images/gallery2.jpg" alt="gallery_image" class="img-thumbnail">
                                         </div>
                                         <div class="col-sm-4">
-                                            <img src="images/gallery3.jpg" alt="gallery_image" class="img-thumbnail">
-                                        </div>
-                                    </div><br>
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <img src="images/gallery4.jpg" alt="gallery_image" class="img-thumbnail">
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <img src="images/gallery5.jpg" alt="gallery_image" class="img-thumbnail">
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <img src="images/gallery6.jpg" alt="gallery_image" class="img-thumbnail">
+                                            <img src="../resources/images/gallery3.jpg" alt="gallery_image" class="img-thumbnail">
                                         </div>
                                     </div><br>
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <img src="images/gallery7.jpg" alt="gallery_image" class="img-thumbnail">
+                                            <img src="../resources/images/gallery4.jpg" alt="gallery_image" class="img-thumbnail">
                                         </div>
                                         <div class="col-sm-4">
-                                            <img src="images/gallery8.jpg" alt="gallery_image" class="img-thumbnail">
+                                            <img src="../resources/images/gallery5.jpg" alt="gallery_image" class="img-thumbnail">
                                         </div>
                                         <div class="col-sm-4">
-                                            <img src="images/gallery9.jpg" alt="gallery_image" class="img-thumbnail">
+                                            <img src="../resources/images/gallery6.jpg" alt="gallery_image" class="img-thumbnail">
+                                        </div>
+                                    </div><br>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img src="../resources/images/gallery7.jpg" alt="gallery_image" class="img-thumbnail">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="../resources/images/gallery8.jpg" alt="gallery_image" class="img-thumbnail">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="../resources/images/gallery9.jpg" alt="gallery_image" class="img-thumbnail">
                                         </div>
                                     </div>
                                 </div>
@@ -326,7 +326,7 @@ $res_id=$_GET['id'];
         </div>
     </div>
 
-    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="../resources/js/login.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('nav').addClass('nav_red');
@@ -338,7 +338,7 @@ $res_id=$_GET['id'];
                 type: 'GET',
                 contentType: "application/json",
                 headers: {
-                    "user-key": "9faa32cf1e41e5931161689b09ee0969"
+                    "user-key": ""
                 },
                 url: query,
                 dataType: 'json',
@@ -349,7 +349,7 @@ $res_id=$_GET['id'];
                 },
                 error: function(response) {
                     alert("Invalid search!");
-                    window.location.href = "index.php";
+                    window.location.href = "../index.php";
                 }
             });
             $.fn.myfunc();
@@ -416,10 +416,10 @@ $res_id=$_GET['id'];
                     if (response.length > 0) {
                         $.each(response, function(i, k) {
                             if(i==0){
-                                $("#review-box").append("<div class='review-list' id=review-" + response[i].id + "><h2 class=text-center> User Review's</h2><div class='clearfix'><div class='pull-left'><h5><i class='fa fa-calendar'></i>&nbsp;&nbsp;" + response[i].date + "</h5><strong><h5>" + response[i].username + "</h5></strong><ul class='list-unstyled list-inline rating-star-list' id=rating-" + response[i].id + "></ul></div><img src='images/review-img.png' alt='Image' class='img-responsive pull-right'></div><div class='review-list-content'><h5>" + response[i].feedback + "</h5></div></div></div>");
+                                $("#review-box").append("<div class='review-list' id=review-" + response[i].id + "><h2 class=text-center> Reviews</h2><div class='clearfix'><div class='pull-left'><h5><i class='fa fa-calendar'></i>&nbsp;&nbsp;" + response[i].date + "</h5><strong><h5>" + response[i].username + "</h5></strong><ul class='list-unstyled list-inline rating-star-list' id=rating-" + response[i].id + "></ul></div><img src='../resources/images/review-img.png' alt='Image' class='img-responsive pull-right'></div><div class='review-list-content'><h5>" + response[i].feedback + "</h5></div></div></div>");
                             }
                             else{
-                                $("#review-box").append("<div class='review-list' id=review-" + response[i].id + "><div class='clearfix'><div class='pull-left'><h5><i class='fa fa-calendar'></i>&nbsp;&nbsp;" + response[i].date + "</h5><h5>" + response[i].username + "</h5><ul class='list-unstyled list-inline rating-star-list' id=rating-" + response[i].id + "></ul></div><img src='images/review-img.png' alt='Image' class='img-responsive pull-right'></div><div class='review-list-content'><h5>" + response[i].feedback + "</h5></div></div></div>");
+                                $("#review-box").append("<div class='review-list' id=review-" + response[i].id + "><div class='clearfix'><div class='pull-left'><h5><i class='fa fa-calendar'></i>&nbsp;&nbsp;" + response[i].date + "</h5><h5>" + response[i].username + "</h5><ul class='list-unstyled list-inline rating-star-list' id=rating-" + response[i].id + "></ul></div><img src='../resources/images/review-img.png' alt='Image' class='img-responsive pull-right'></div><div class='review-list-content'><h5>" + response[i].feedback + "</h5></div></div></div>");
                             }
                             var rate = response[i].rating;
                             var len = rate / 1,

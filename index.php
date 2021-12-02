@@ -8,7 +8,7 @@
     <title>Deliccio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="./resources/styles/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,7 +24,7 @@
                     <i class="fa fa-bars fa-2x"></i>
                 </div>
                 <div class="logo">
-                    <img src="images/logo.png" class="img-responsive">
+                    <img src="./resources/images/logo.png" class="img-responsive">
                 </div>
                 <div class="menu">
                     <ul>
@@ -34,7 +34,7 @@
                                 echo"<li id='nav_signup'><a href='#'' data-toggle='modal' data-target='#signup_modal'>Sign Up</a></li>
                                 <li id='nav_login'><a href='#'' data-toggle='modal' data-target='#login_modal'>Login</a></li>";
                             }else{
-                                echo"<li id='nav_logout'><a href='logout.php'>Logout</a></li>";
+                                echo"<li id='nav_logout'><a href='./src/logout.php'>Logout</a></li>";
                             }
                         ?>
 
@@ -43,7 +43,7 @@
             </nav>
             <div class="panel panel-default" id="search_area">
                 <div classs="panel-body">
-                    <form action="restaurant_list.php" method="get">
+                    <form action="./src/restaurant_list.php" method="get">
                         <h3 class="text-center">Find the best Restaurants, Cafes & Cuisine here!..</h3>
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-university"></i></span>
@@ -81,14 +81,14 @@
                         </div>
                     </div>
                     <div class="col-lg-7 col-sm-6 col-xs-12">
-                        <img src="images/welcome-img1.jpg" alt="Welcome" class="img-responsive img-center">
+                        <img src="./resources/images/welcome-img1.jpg" alt="Welcome" class="img-responsive img-center">
                     </div>
                 </div>
             </section>
             <div class="food-menu-grid row text-center">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu9.jpg" alt="chinese" class="img-responsive ">
+                        <img src="./resources/images/menu9.jpg" alt="chinese" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Chinese</h4>
                         </div>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu7.jpg" alt="Indian" class="img-responsive ">
+                        <img src="./resources/images/menu7.jpg" alt="Indian" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Indian</h4>
                         </div>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu6.jpg" alt="italian" class="img-responsive ">
+                        <img src="./resources/images/menu6.jpg" alt="italian" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Italian</h4>
                         </div>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu8.jpg" alt="continental" class="img-responsive ">
+                        <img src="./resources/images/menu8.jpg" alt="continental" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Continental</h4>
                         </div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu3.jpg" alt="thai" class="img-responsive ">
+                        <img src="./resources/images/menu3.jpg" alt="thai" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Thai</h4>
                         </div>
@@ -128,7 +128,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu4.jpg" alt="sushi" class="img-responsive ">
+                        <img src="./resources/images/menu4.jpg" alt="sushi" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Sushi</h4>
                         </div>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu5.jpg" alt="Pizza" class="img-responsive ">
+                        <img src="./resources/images/menu5.jpg" alt="Pizza" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Pizza &amp; Burgers</h4>
                         </div>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu1.jpg" alt="Veggies" class="img-responsive ">
+                        <img src="./resources/images/menu1.jpg" alt="Veggies" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Pure Veggies</h4>
                         </div>
@@ -152,7 +152,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="hover-content">
-                        <img src="images/menu2.jpg" alt="tiffins &amp; breakfast" class="img-responsive ">
+                        <img src="./resources/images/menu2.jpg" alt="tiffins &amp; breakfast" class="img-responsive ">
                         <div class="overlay">
                             <h4 class="text-uppercase">Tiffins &amp; Breakfast</h4>
                         </div>
@@ -188,8 +188,8 @@
                                 </a>
                 </li>
             </ul>
-            <center><b><p>© Deliccio 2018</p></b></center>
-            <center><b><p>Handcrafted by Sandeep Kumar</p></b></center>
+            <center><b><p>© Deliccio 2022</p></b></center>
+            <center><b><p>Developed by Sandeep Kumar</p></b></center>
         </footer>
     </div>
 
@@ -285,7 +285,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="./resources/js/login.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $("#signup_success,#signup_error,#login_error").hide();

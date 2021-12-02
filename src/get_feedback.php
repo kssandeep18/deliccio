@@ -6,7 +6,7 @@ if(isset($_POST['feedback'])&&isset($_POST['rating'])){
 	$user_id=$_POST['uid'];
 	$feedback=$_POST['feedback'];
 	$rating=$_POST['rating'];
-	$query="INSERT INTO restaurants VALUES ('','$user_id','$res_id','$feedback','$rating',now())";
+	$query="INSERT INTO restaurants VALUES (DEFAULT,'$user_id','$res_id','$feedback','$rating',now())";
 	$result=mysqli_query($con,$query);
 	if($result){
 		echo "1";

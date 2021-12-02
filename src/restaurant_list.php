@@ -4,7 +4,7 @@ if(isset($_GET['city']) && isset($_GET['search_hotel'])){
   $city=$_GET['city'];
   $search_text=$_GET['search_hotel'];  
 }else{
-  header("location:index.php");
+  header("location:../index.php");
   exit;
 }
 
@@ -16,12 +16,11 @@ if(isset($_GET['city']) && isset($_GET['search_hotel'])){
     <title>Deliccio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/style1.css">
+    <link rel="stylesheet" type="text/css" href="../resources/styles/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="login.js"></script>
 </head>
 
 <body>
@@ -30,11 +29,11 @@ if(isset($_GET['city']) && isset($_GET['search_hotel'])){
             <i class="fa fa-bars fa-2x"></i>
         </div>
         <div class="logo">
-            <img src="images/logo.png" class="img-responsive">
+            <img src="../resources/images/logo.png" class="img-responsive">
         </div>
         <div class="menu">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <?php 
                         if(!isset($_SESSION['isLogin'])){
                             echo"<li id='nav_signup'><a href='#'' data-toggle='modal' data-target='#signup_modal'>Sign Up</a></li>
@@ -157,7 +156,7 @@ if(isset($_GET['city']) && isset($_GET['search_hotel'])){
                 type: 'GET',
                 contentType: "application/json",
                 headers: {
-                    "user-key": "9faa32cf1e41e5931161689b09ee0969"
+                    "user-key": ""
                 },
                 url: query,
                 dataType: 'json',
@@ -176,6 +175,7 @@ if(isset($_GET['city']) && isset($_GET['search_hotel'])){
             });
         });
     </script>
+    <script type="text/javascript" src="../resources/js/login.js"></script>
 </body>
 
 </html>
